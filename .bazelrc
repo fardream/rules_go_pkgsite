@@ -1,0 +1,9 @@
+common --enable_bzlmod
+
+common --lockfile_mode=off
+
+common --incompatible_sandbox_hermetic_tmp
+
+common --incompatible_strict_action_env
+
+common --incompatible_enable_proto_toolchain_resolution

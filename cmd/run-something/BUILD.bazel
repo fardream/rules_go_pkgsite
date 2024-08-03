@@ -1,0 +1,15 @@
+load("@rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "run-something_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/fardream/rules_go_pkgsite/cmd/run-something",
+    visibility = ["//visibility:private"],
+    deps = ["//:rules_go_pkgsite"],
+)
+
+go_binary(
+    name = "run-something",
+    embed = [":run-something_lib"],
+    visibility = ["//visibility:public"],
+)

@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package rules_go_pkgsite;
+
+option go_package = "github.com/fardream/rules_go_pkgsite";
+
+message Foo {
+  string a_string = 1;
+  optional double a_double = 2;
+}
